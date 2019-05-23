@@ -135,13 +135,9 @@ public class ConceptUtil {
         Set<OWLAxiom> moduleAxioms=
                 ModularityUtils.extractModule(ontology, owlEntities, moduleType);
         // Create an ontology for the module axioms
-//******************************************************************************************************************** */
         // manager.applyChanges(manager.addAxioms(moduleOnt, moduleAxioms));
-        
-        manager.addAxiom(moduleOnt, (OWLAxiom) moduleAxioms);
-        
-
-//********************************************************************************************************************** */
+        // different from version 3 and version 4 this is only need */
+        manager.addAxioms(moduleOnt, moduleAxioms);
         // OWLOntologyChange
 
         //            PelletReasoner reasoner = PelletReasonerFactory.getInstance().createReasoner( moduleOnt );
